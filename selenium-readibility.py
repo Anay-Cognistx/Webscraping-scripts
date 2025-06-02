@@ -4,10 +4,9 @@ import time
 
 #Basic setup
 chrome_options = Options()
-chrome_options.add_argument("--headless=new")
-chrome_options.add_argument("--disable-gpu")
-chrome_options.add_argument("--no-sandbox")
-driver = webdriver.Chrome(options=chrome_options)
+chrome_options.add_argument("--headless=new") #disables gui, unnecessary
+chrome_options.add_argument("--no-sandbox") #bypasses security
+driver = webdriver.Chrome(options=chrome_options) #launches chrome to driver
 
 url = "https://flypittsburgh.com/pittsburgh-international-airport/parking/#parking-options"
 driver.get(url)
