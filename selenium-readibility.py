@@ -29,14 +29,10 @@ driver.execute_script("""
 
 time.sleep(3) # Again, not sure if this is needed
 
-#Exctacts content
+#Actual script
 article = driver.execute_script("""
-    try {
-        const article = new Readability(document).parse();
-        return article ? article.textContent : "No readable content found.";
-    } catch (e) {
-        return "Error parsing with Readability: " + e.toString();
-    }
+    const article = new Readability(document).parse();
+    return article ? article.textContent : "No readable content found.";
 """)
 
 print(article)
