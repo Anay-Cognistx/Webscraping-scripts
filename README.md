@@ -11,6 +11,8 @@ However, for dropdown elements and others, this method can yield inconsistent re
 - Extracts text from the accessibility mode in a cleaner and summarized format
 - Overall simpler and less computationally expensive
 
+Currently, the selenium-readibility.py script outputs 2 .txt files in an "output" directory, one of the old implementation and one of the new, for the same specified url.
+
 
 Comparison on URL: https://flypittsburgh.com/pittsburgh-international-airport/parking/#parking-options
 
