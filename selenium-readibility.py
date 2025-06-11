@@ -15,7 +15,7 @@ sys.path.insert(0, scraper_utils_dir)
 from scraper_utils import save_url_as_txt, save_text_to_file
 
 
-#Basic setup
+#Basic setup 
 chrome_options = Options()
 chrome_options.add_argument("--headless=new") #disables gui, unnecessary
 chrome_options.add_argument("--no-sandbox") #bypasses security
