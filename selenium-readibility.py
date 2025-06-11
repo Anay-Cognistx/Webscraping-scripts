@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 import sys
 import os
+import re
 
 
 
@@ -11,7 +12,7 @@ scraper_utils_dir = os.path.abspath(
 )
 sys.path.insert(0, scraper_utils_dir)
 
-from scraper_utils import save_url_as_txt
+from scraper_utils import save_url_as_txt, save_text_to_file
 
 
 #Basic setup
@@ -52,6 +53,12 @@ article = driver.execute_script("""
     return article ? article.textContent : "No readable content found.";
 """)
 
-print(article)
+def clean_lines(text: str) -> str:
+    cleaned_lines = [line.strip() for line in text.splitlines() if line.strip()]
+    return "\n".join(cleaned_lines)
+
+article = clean_lines(article)
+
+save_text_to_file(article, "readibility", output_dir="output")
 
 driver.quit()
