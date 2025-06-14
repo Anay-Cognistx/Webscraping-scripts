@@ -2,8 +2,8 @@
 
 ## Current Implementation
 - Takes screenshots of webpage
-- Uses OCR (Optical character recognition) on PDFs
-However, for dropdown elements and others, this method can yield inconsistent results.
+- Uses OCR (Optical character recognition) on PDFs,
+however, for dropdown elements and others, this method can yield inconsistent results.
 
 ## New Implementation  
 - Leverages Firefox browser's accessibility mode through a js library called "readibility"
